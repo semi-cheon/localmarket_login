@@ -18,10 +18,13 @@ samples, guidance on mobile development, and a full API reference.
 project setting
 
   1. yaml dependency 추가
+  ```
     supabase_flutter: ^2.5.3
     image_picker: ^1.1.1
-
+  ```
+  
   2. ios - info.plist 수정
+  ```
     // login setting 
     <key>CFBundleURLTypes</key>
         <array>
@@ -41,8 +44,10 @@ project setting
     <string>need to access the camera</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>need to access the mic</string>
-    
+  ```
+
   3. andriod - androidmanifest.xml 수정
+   ```
     <!-- login settings -->
     <intent-filter>
         <action android:name="android.intent.action.VIEW" />
@@ -53,7 +58,10 @@ project setting
             android:scheme="io.supabase.flutterquickstart"
             android:host="login-callback" />
     </intent-filter>
+   ```
 
   4. main.dart 내 supabase initialize setting
+  ```
     url: 'SUPABASE_URL',
     anonKey:'SUPABASE_ANON_KEY'
+  ```
