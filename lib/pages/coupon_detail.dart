@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class CouponDetail extends StatelessWidget {
   final int id;
-
-  const CouponDetail({required this.id, super.key});
+  final item;
+  const CouponDetail({required this.id, required this.item, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,10 @@ class CouponDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Text('hh'), Text('hh'), Text('hh'), Text(id.toString())],
+        children: [
+          Text(id.toString()),
+          Text(item.toString())
+        ],
       ),
     );
   }

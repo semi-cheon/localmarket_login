@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class NewsDetail extends StatelessWidget {
   final int id;
-  const NewsDetail({required this.id, super.key});
+  final item;
+  const NewsDetail({required this.id, required this.item, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +12,8 @@ class NewsDetail extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('hh'),
-          Text('hh'),
-          Text('hh'), Text(id.toString())
+          Text(id.toString()),
+          Text(item.toString())
         ],
       ),
     );
